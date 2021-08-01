@@ -1,32 +1,24 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div class="bg-app min-h-screen overflow-auto">
+    <div id="nav" class="flex justify-between shadow-lg px-5">
+      <h2 class="w-2/12 text-4xl font-bold text-green-600 py-3 font-title">
+        MySeriesList
+      </h2>
+      <span class="w-5/12 flex justify-between text-white py-5">
+        <a><p>Quero assistir</p></a>
+        <a><p>Favoritos</p></a>
+        <a><p>Assistido</p></a>
+        <a>
+          <v-icon x-large color="white"> mdi-magnify </v-icon>
+        </a>
+      </span>
     </div>
     <router-view />
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<script>
+export default {
+  name: "App",
+};
+</script>
